@@ -302,7 +302,7 @@ class OrderFromChaos {
         this.triangleFill = false
         this.triangleFillColor = '#ccc'
 
-        this.dotRadius = 4
+        this.dotRadius = 8
         this.dotLine = false
         this.dotLineWidth = 1
         this.dotLineColor = '#000'
@@ -310,7 +310,7 @@ class OrderFromChaos {
         this.dotFillColor = '#000'
         
         this.initializeSubviews()
-        // this.draw()
+        
         this.startDemo()
         
         this.log('Created')
