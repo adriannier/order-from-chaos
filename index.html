@@ -5,9 +5,12 @@
     <head>
 
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        
         <title>OrderFromChaos Demo</title>
-        <link rel="stylesheet" href="order_from_chaos.css">
-        <script src="order_from_chaos.js"></script>
+        <link rel="stylesheet" href="order_from_chaos.css?v=3">
+        <script src="order_from_chaos.js?v=3"></script>
+        
     </head>
     
     <body>
@@ -40,26 +43,25 @@
             
             var debugMode = false
             var duration = 15
-            
-            var x = 50
-            var y = 100
-            var xPadding = 50
-            var yPadding = 100
-                
-            var radius
+            var x, y, radius
                 
             if (window.innerWidth < window.innerHeight) {
-                radius = window.innerWidth / 2 - x
+                
+                radius = window.innerWidth / 2 - 50
+                x = 50
+                y = (window.innerHeight - radius * 2) / 2
+                
             } else {
-                radius = window.innerHeight / 2 - y
+                
+                radius = window.innerHeight / 2 - 100
+                x = (window.innerWidth - radius * 2) / 2
+                y = 100
+                
             }
 
             OrderFromChaos.setDebugMode(debugMode)
             
             var first = new OrderFromChaos(x, y, radius, duration, 'counter-clockwise')
-            // var second = new OrderFromChaos(radius * 2 + xPadding, y, radius, duration, 'clockwise')
-            // var third = new OrderFromChaos(x, radius * 2 + yPadding, radius, duration, 'counter-clockwise')
-            // var fourth = new OrderFromChaos(radius * 2 + xPadding, radius * 2 + yPadding, radius, duration, 'clockwise')
                         
         </script>
          
