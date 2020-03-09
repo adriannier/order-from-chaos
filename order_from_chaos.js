@@ -585,9 +585,8 @@ class OrderFromChaos {
     setAnimations() {
         
         // Safari Bug Fix
-        this.container.style.left = this.cssLength(parseInt(this.container.style.left, 10))
-        this.container.style.top = this.cssLength(parseInt(this.container.style.left, 10))
-        
+        this.container.style.top = this.cssLength(this.y + 1)
+                
         var clockwise = this.rotationDirection == 'clockwise'
     
         // Set star animation
