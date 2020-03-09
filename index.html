@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>OrderFromChaos Demo</title>
+        <link rel="stylesheet" href="order_from_chaos.css">
+        <script src="order_from_chaos.js"></script>
+    </head>
+    
+    <body>
+      
+       <ul id="toolbar">
+            
+            <li class="title">Demo:</li>
+            <li><a class="demo-toggle" href="javascript:ToolbarController.toggleDemo()">Stop</a></li>
+
+            <li class="title">Animation:</li>
+            <li><a class="animation-toggle" href="javascript:ToolbarController.toggleAnimation()">Pause</a></li>
+
+            <li class="title">Line width:</li>
+            <li><a href="javascript:OrderFromChaos.decreaseLineWidth()">Narrower</a></li>
+            <li><a href="javascript:OrderFromChaos.increaseLineWidth()">Wider</a></li>
+                        
+            <li class="animation-option title">Toggle:</li>
+            <li class="animation-option"><a href="javascript:OrderFromChaos.toggleStar()">Star</a></li>
+            <li class="animation-option"><a href="javascript:OrderFromChaos.toggleTriangles()">Triangles</a></li>
+            <li class="animation-option"><a href="javascript:OrderFromChaos.toggleRects()">Rects</a></li>
+            <li class="animation-option"><a href="javascript:OrderFromChaos.toggleDots()">Dots</a></li>
+
+            <li class="speed-option title">Speed:</li>
+            <li class="speed-option"><a href="javascript:OrderFromChaos.decreaseSpeed()">Decrease</a></li>
+            <li class="speed-option"><a href="javascript:OrderFromChaos.increaseSpeed()">Increase</a></li>
+            
+        </ul>
+        
+        <script>
+            
+            var debugMode = false
+            var duration = 15
+            
+            var x = 50
+            var y = 100
+            var xPadding = 50
+            var yPadding = 100
+                
+            var radius
+                
+            if (window.innerWidth < window.innerHeight) {
+                radius = window.innerWidth / 2 - x
+            } else {
+                radius = window.innerHeight / 2 - y
+            }
+
+            OrderFromChaos.setDebugMode(debugMode)
+            
+            var first = new OrderFromChaos(x, y, radius, duration, 'counter-clockwise')
+            // var second = new OrderFromChaos(radius * 2 + xPadding, y, radius, duration, 'clockwise')
+            // var third = new OrderFromChaos(x, radius * 2 + yPadding, radius, duration, 'counter-clockwise')
+            // var fourth = new OrderFromChaos(radius * 2 + xPadding, radius * 2 + yPadding, radius, duration, 'clockwise')
+                        
+        </script>
+         
+    </body>
+    
+</html>

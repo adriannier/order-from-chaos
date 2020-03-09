@@ -1,0 +1,83 @@
+#toolbar {
+
+    margin: 0;
+    padding: 10px 0 0 20px;
+    z-index: 9999;
+    
+}
+
+#toolbar li {
+    
+    margin: 0;
+    font-family: Menlo, Monaco, monospace, serif;
+    font-weight: bold;
+    font-size: 13px;
+    
+    
+    list-style-type: none;
+    float: left;
+    
+}
+
+#toolbar li.title {
+    padding-right: 10px;
+}
+
+#toolbar li.title:not(:first-child) {
+     padding-left: 20px;
+}
+
+#toolbar li a {
+    
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+#toolbar .animation-option {
+    
+    display: none;
+    
+}
+
+div.debug {
+    outline: 1px solid blue;
+    opacity: 1;
+}
+
+@keyframes full-spin { 
+    100% { transform: rotate(360deg); } 
+}
+
+@keyframes reverse-full-spin { 
+    100% { transform: rotate(-360deg); } 
+}
+
+@keyframes star-opacity {
+    0%   { opacity: 0; }
+    54%  { opacity: 0; }
+    69%  { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes triangle-opacity {
+    0%   { opacity: 0; }
+    10%  { opacity: 0; }
+    25%  { opacity: 1; }
+    28%  { opacity: 0; }
+    70%  { opacity: 0; }
+    85%  { opacity: 1; }
+    95%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes rect-opacity {
+    0%   { opacity: 0; }
+    32%  { opacity: 0; }
+    47%  { opacity: 1; }
+    50%  { opacity: 0; }
+    65%  { opacity: 0; }
+    70%  { opacity: 1; }
+    95%  { opacity: 0; }
+    100% { opacity: 0; }
+}
